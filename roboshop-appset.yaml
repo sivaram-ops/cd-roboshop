@@ -1,0 +1,47 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: roboshop-microservices
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - name: mongodb
+        path: 4-kind-k8s-roboshop-helm/1-mongodb
+      - name: redis
+        path: 4-kind-k8s-roboshop-helm/2-redis
+      - name: mysql
+        path: 4-kind-k8s-roboshop-helm/3-mysql
+      - name: rabbitmq
+        path: 4-kind-k8s-roboshop-helm/4-rabbitmq
+      - name: catalogue
+        path: 4-kind-k8s-roboshop-helm/5-catalogue
+      - name: user
+        path: 4-kind-k8s-roboshop-helm/6-user
+      - name: cart
+        path: 4-kind-k8s-roboshop-helm/7-cart
+      - name: shipping
+        path: 4-kind-k8s-roboshop-helm/8-shipping
+      - name: payment
+        path: 4-kind-k8s-roboshop-helm/9-payment
+      - name: frontend
+        path: 4-kind-k8s-roboshop-helm/10-frontend
+  template:
+    metadata:
+      name: '{{name}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/sivaram-ops/cd-roboshop.git
+        targetRevision: HEAD
+        path: '{{path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: default
+      syncPolicy:
+        syncOptions:
+        - CreateNamespace=true
+        automated:
+          selfHeal: true
+          prune: true
