@@ -40,8 +40,8 @@ containerPorts:
 - containerPort: 15672
 
 image:
-  repository: sivaram0101/rabbitmq-roboshop
-  tag: v1
+  repository: rabbitmq
+  tag: 3-management
   pullPolicy: IfNotPresent
 
 env:
