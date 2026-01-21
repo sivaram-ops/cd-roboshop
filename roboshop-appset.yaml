@@ -8,28 +8,40 @@ spec:
   - list:
       elements:
       - name: mongodb
-        path: 4-kind-k8s-roboshop-helm/1-mongodb
+        path: 1-mongodb
+        wave: "1"
       - name: redis
-        path: 4-kind-k8s-roboshop-helm/2-redis
+        path: 2-redis
+        wave: "1"
       - name: mysql
-        path: 4-kind-k8s-roboshop-helm/3-mysql
+        path: 3-mysql
+        wave: "1"
       - name: rabbitmq
-        path: 4-kind-k8s-roboshop-helm/4-rabbitmq
+        path: 4-rabbitmq
+        wave: "1"
       - name: catalogue
-        path: 4-kind-k8s-roboshop-helm/5-catalogue
+        path: 5-catalogue
+        wave: "2"
       - name: user
-        path: 4-kind-k8s-roboshop-helm/6-user
+        path: 6-user
+        wave: "2"
       - name: cart
-        path: 4-kind-k8s-roboshop-helm/7-cart
+        path: 7-cart
+        wave: "3"
       - name: shipping
-        path: 4-kind-k8s-roboshop-helm/8-shipping
+        path: 8-shipping
+        wave: "2"
       - name: payment
-        path: 4-kind-k8s-roboshop-helm/9-payment
+        path: 9-payment
+        wave: "2"
       - name: frontend
-        path: 4-kind-k8s-roboshop-helm/10-frontend
+        path: 10-frontend
+        wave: "4"
   template:
     metadata:
       name: '{{name}}'
+      annotations:
+        argocd.argoproj.io/sync-wave: '{{wave}}'
     spec:
       project: default
       source:
