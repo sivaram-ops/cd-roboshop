@@ -8,25 +8,25 @@ spec:
   - list:
       elements:
       - name: mongodb
-        path: 4-kind-k8s-roboshop-helm/1-mongodb
+        path: 1-mongodb
       - name: redis
-        path: 4-kind-k8s-roboshop-helm/2-redis
+        path: 2-redis
       - name: mysql
-        path: 4-kind-k8s-roboshop-helm/3-mysql
+        path: 3-mysql
       - name: rabbitmq
-        path: 4-kind-k8s-roboshop-helm/4-rabbitmq
+        path: 4-rabbitmq
       - name: catalogue
-        path: 4-kind-k8s-roboshop-helm/5-catalogue
+        path: 5-catalogue
       - name: user
-        path: 4-kind-k8s-roboshop-helm/6-user
+        path: 6-user
       - name: cart
-        path: 4-kind-k8s-roboshop-helm/7-cart
+        path: 7-cart
       - name: shipping
-        path: 4-kind-k8s-roboshop-helm/8-shipping
+        path: 8-shipping
       - name: payment
-        path: 4-kind-k8s-roboshop-helm/9-payment
+        path: 9-payment
       - name: frontend
-        path: 4-kind-k8s-roboshop-helm/10-frontend
+        path: 10-frontend
   template:
     metadata:
       name: '{{name}}'
