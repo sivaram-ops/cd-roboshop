@@ -9,7 +9,6 @@ spec:
       elements:
       - name: mongodb
         path: 1-mongodb
-<<<<<<< HEAD
         wave: "1"
       - name: redis
         path: 2-redis
@@ -38,26 +37,6 @@ spec:
       - name: frontend
         path: 10-frontend
         wave: "4"
-=======
-      - name: redis
-        path: 2-redis
-      - name: mysql
-        path: 3-mysql
-      - name: rabbitmq
-        path: 4-rabbitmq
-      - name: catalogue
-        path: 5-catalogue
-      - name: user
-        path: 6-user
-      - name: cart
-        path: 7-cart
-      - name: shipping
-        path: 8-shipping
-      - name: payment
-        path: 9-payment
-      - name: frontend
-        path: 10-frontend
->>>>>>> 2541327d7200702d3667d226bdfd726ebc5d962e
   template:
     metadata:
       name: '{{name}}'
