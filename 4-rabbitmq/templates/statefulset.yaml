@@ -2,9 +2,9 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: "{{ .Release.Name }}-statefulset"
+  name: "{{ .Chart.Name }}-statefulset"
   labels:
-    app: "{{ .Release.Name }}-statefulset"
+    app: "{{ .Chart.Name }}-statefulset"
 spec:
   serviceName: {{ .Values.service.name }}
   selector:
