@@ -41,5 +41,4 @@ spec:
   - protocol: TCP
     port: {{ .Values.mqDashboard.port }}
     targetPort: {{ .Values.mqDashboard.targetPort }}
-    # nodePort: {{ .Values.mqDashboard.nodePort }}
 ---

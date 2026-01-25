@@ -26,7 +26,6 @@ mqDashboard:
   type: LoadBalancer
   port: 15672
   targetPort: 15672
-  # nodePort: 30000
 
 replicaCount: 1
 
