@@ -14,11 +14,11 @@ service:
 ports:
 - port: 5671
   targetPort: 5671
-  # name: rabbitmq-tls
+  name: rabbitmq-tls
   protocol: TCP
 - port: 5672
   targetPort: 5672
-  # name: rabbitmq-amqp
+  name: rabbitmq-amqp
   protocol: TCP
 
 mqDashboard:

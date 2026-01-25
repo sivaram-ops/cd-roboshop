@@ -33,7 +33,7 @@ spec:
   - metadata:
       name: {{ .Values.storage.name }}
     spec:
-      storageClassName: {{ .Values.storage.calssName }}
+      storageClassName: {{ .Values.storage.className }}
       accessModes: [ {{ .Values.storage.accessMode }} ]
       resources:
         requests:
