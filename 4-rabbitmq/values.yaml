@@ -14,19 +14,19 @@ service:
 ports:
 - port: 5671
   targetPort: 5671
-  name: rabbitmq-tls
+  # name: rabbitmq-tls
   protocol: TCP
 - port: 5672
   targetPort: 5672
-  name: rabbitmq-amqp
+  # name: rabbitmq-amqp
   protocol: TCP
 
 mqDashboard:
   name: rabbitmq-dashboard
-  type: NodePort
+  type: LoadBalancer
   port: 15672
   targetPort: 15672
-  nodePort: 30000
+  # nodePort: 30000
 
 replicaCount: 1
 

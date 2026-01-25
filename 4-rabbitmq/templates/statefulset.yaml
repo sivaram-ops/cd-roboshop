@@ -2,18 +2,18 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: {{ .Release.Name }}
+  name: "{{ .Release.Name }}-statefulset"
   labels:
-    app: {{ .Release.Name }}
+    app: "{{ .Release.Name }}-statefulset"
 spec:
   serviceName: {{ .Values.service.name }}
   selector:
     matchLabels:
-      app: {{ .Release.Name }}
+      app: {{ .Chart.Name }}
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}
+        app: {{ .Chart.Name }}
     spec:
       containers:
       - name: {{ .Values.container.name }}
