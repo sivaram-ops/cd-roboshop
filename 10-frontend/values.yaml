@@ -14,9 +14,9 @@ resources:
     cpu: 200m
 
 service:
-  type: NodePort
+  type: ClusterIP
   port: 80
   targetPort: 80
-  nodePort: 30000
+  # nodePort: 30000
 
 # next i will try the probes
