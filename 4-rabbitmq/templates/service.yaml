@@ -8,7 +8,7 @@ spec:
   selector:
     app: {{ .Chart.Name }}
   ports:
-  {{- toYaml .Values.ports | nindent 2 }}
+  {{- toYaml .Values.ports | nindent 4 }}
   # - name: rabbitmq-tls
   #   protocol: TCP
   #   port: 5671
