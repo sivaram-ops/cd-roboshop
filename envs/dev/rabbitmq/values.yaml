@@ -8,7 +8,7 @@ replicaCount: 1
 
 image:
   repository: sivaram0101/rabbitmq-roboshop
-  tag: "v11"
+  tag: "v1"
 
 podSecurityContext:
   runAsNonRoot: false
