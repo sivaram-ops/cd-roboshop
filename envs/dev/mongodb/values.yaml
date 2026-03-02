@@ -8,7 +8,7 @@ replicaCount: 1
 
 image:
   repository: sivaram0101/mongodb-roboshop
-  tag: "v6"
+  tag: "v7"
 
 podSecurityContext:
   runAsNonRoot: false
