@@ -1,6 +1,6 @@
 image:
   repository: sivaram0101/catalogue-roboshop
-  tag: "v7"
+  tag: "v8"
 
 service:
   port: 8080
