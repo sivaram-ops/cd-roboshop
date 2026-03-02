@@ -1,4 +1,4 @@
-image: { repository: sivaram0101/cart-roboshop, tag: "v11" }
+image: { repository: sivaram0101/cart-roboshop, tag: "v1" }
 
 service:
   port: 8080
