@@ -1,6 +1,6 @@
 image:
   repository: sivaram0101/frontend-roboshop
-  tag: "v11"
+  tag: "v8"
 
 service:
   port: 80
