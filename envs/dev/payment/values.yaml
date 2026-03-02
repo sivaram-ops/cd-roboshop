@@ -1,6 +1,6 @@
 image:
   repository: sivaram0101/payment-roboshop
-  tag: "v11"
+  tag: "v2"
 
 service:
   port: 8080
