@@ -1,6 +1,6 @@
 image:
   repository: sivaram0101/user-roboshop
-  tag: "v1"
+  tag: "v2"
 
 service:
   port: 8080
