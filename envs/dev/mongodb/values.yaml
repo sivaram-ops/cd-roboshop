@@ -60,7 +60,7 @@ volumeClaimTemplates:
     spec:
       accessModes: ["ReadWriteOnce"]
       # storageClassName: sc-hostpath
-      storageClassName: local-path
+      storageClassName: "local-path"
       resources:
         requests:
           storage: 1Gi
