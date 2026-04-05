@@ -1,8 +1,8 @@
 isStatefulSet: true
 
-nodeName: "k3d-roboshop26feb-agent-0"
+# nodeName: "k3d-roboshop26feb-agent-0"
 
-hostPath: "/database-data/mongodb/"
+# hostPath: "/database-data/mongodb/"
 
 replicaCount: 1
 
@@ -59,7 +59,8 @@ volumeClaimTemplates:
       name: mongodb-data
     spec:
       accessModes: ["ReadWriteOnce"]
-      storageClassName: sc-hostpath
+      # storageClassName: sc-hostpath
+      storageClassName: local-path
       resources:
         requests:
           storage: 1Gi
