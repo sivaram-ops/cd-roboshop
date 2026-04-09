@@ -1,8 +1,8 @@
 isStatefulSet: true
 
-nodeName: "k3d-roboshop26feb-agent-2"
+# nodeName: "k3d-roboshop26feb-agent-2"
 
-hostPath: "/database-data/redis/"
+# hostPath: "/database-data/redis/"
 
 replicaCount: 1
 
@@ -61,6 +61,7 @@ volumeClaimTemplates:
     spec:
       accessModes: ["ReadWriteOnce"]
       storageClassName: sc-hostpath
+      storageClassName: "local-path"
       resources:
         requests:
           storage: 1Gi

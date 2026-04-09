@@ -1,8 +1,8 @@
 isStatefulSet: true
 
-nodeName: "k3d-roboshop26feb-agent-1"
+# nodeName: "k3d-roboshop26feb-agent-1"
 
-hostPath: "/database-data/mysql/"
+# hostPath: "/database-data/mysql/"
 
 replicaCount: 1
 
@@ -66,6 +66,7 @@ volumeClaimTemplates:
     spec:
       accessModes: ["ReadWriteOnce"]
       storageClassName: sc-hostpath
+      storageClassName: "local-path"
       resources:
         requests:
           storage: 1Gi

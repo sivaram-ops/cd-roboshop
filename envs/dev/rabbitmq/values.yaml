@@ -1,8 +1,8 @@
 isStatefulSet: true
 
-nodeName: "k3d-roboshop26feb-agent-0"
+# nodeName: "k3d-roboshop26feb-agent-0"
 
-hostPath: "/database-data/rabbitmq/"
+# hostPath: "/database-data/rabbitmq/"
 
 replicaCount: 1
 
@@ -56,6 +56,7 @@ volumeClaimTemplates:
     spec:
       accessModes: ["ReadWriteOnce"]
       storageClassName: sc-hostpath
+      storageClassName: "local-path"
       resources:
         requests:
           storage: 2Gi
