@@ -55,7 +55,7 @@ volumeClaimTemplates:
       name: rabbitmq-data
     spec:
       accessModes: ["ReadWriteOnce"]
-      storageClassName: sc-hostpath
+      # storageClassName: sc-hostpath
       storageClassName: "local-path"
       resources:
         requests:
