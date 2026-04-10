@@ -90,6 +90,7 @@ volumes:
 
 ingress:
   enabled: true
+  className: "traefik"
   hosts:
     - host: localhost
       paths:
